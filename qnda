@@ -160,3 +160,21 @@ public class TestClass {
 	    }
 }
 ===============================================================================================================
+Jenkins: Create a New Maven Project and Execute Job with "clean test"
+To automate the Maven project build and execute the test using Jenkins, follow these steps:
+
+1. Create a New Maven Project in Jenkins:
+Open Jenkins and click on New Item.
+Enter a name for your project and select Maven project.
+Click OK.
+2. Configure the Maven Project:
+Under the Build section, add a build step: Invoke top-level Maven targets.
+In the Goals field, enter: clean test
+Ensure your Maven pom.xml is set up correctly, and Jenkins can find the necessary dependencies.
+3. Save the Project:
+Click Save to save your job.
+4. Build the Project:
+To run the job, click on Build Now.
+Jenkins will execute the Maven goals (clean test) and run your tests.
+Optional: Configure Jenkins to use a specific version of Maven if required by installing Maven via Jenkins and configuring the Maven installation in the system settings.
+This should execute your Selenium test and any other Maven-based tests.
