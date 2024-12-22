@@ -1,1 +1,23 @@
 qwdqwtoday
+
+
+1] command to print lines/etc/passwd file
+writye the output of ls command to files.txt
+change the permission of files.txt to allow inly user to read and write nut group can read ,write and execute  also .
+create a new user "dac2"\
+change the group of file "file.txt" to dac2
+
+2.write a bsh script to find given directory exitsts or not ar any path .if not exits create it.take directory from user
+
+3write a program  to find the largest 4 digit number divisible by 10 and 13
+create git project 
+
+write a dockerfile to execute ] PROGRA IN CONATINER
+
+4 ] write selenium script to automate "the selenium simplified search engine"
+1]open https://testpages.eviltester.com/styled/search
+2] enter any string in search box
+3]
+verify the result(only first bullet on result)
+
+create new maven prohecr in Jenkins and execute the job with goal "clean test"
