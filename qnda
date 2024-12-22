@@ -106,4 +106,45 @@ create new maven prohecr in Jenkins and execute the job with goal "clean test"
 Q4 karo
 testclass.java  file ka code bhejo
 ha krra zip bhej ra puri
+--------------------
+package com.cdac.acts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class TestClass {
+	WebDriver driver;
+	@BeforeTest
+    public void profileSetup()
+    {	
+		 driver = new ChromeDriver();
+		driver.get("https://testpages.eviltester.com/styled/search");
+        driver.manage().window().maximize();
+        
+        
+    }
+	@Test
+    public void textBoxTest1() throws InterruptedException
+    {
+		driver.get("https://testpages.eviltester.com/styled/search");
+		 driver.findElement(By.xpath("//input[@name='q']")).clear();
+		 driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Selenium");
+		
+	     driver.findElement(By.xpath("//input[@name='q']")).submit();
+	   
+
+    }
+	 @AfterTest
+	    public void tearDown() {
+	        // Close the browser after the test
+	        if (driver != null) {
+	            driver.quit();
+	        }
+	    }
+}
+
 
