@@ -178,3 +178,8 @@ To run the job, click on Build Now.
 Jenkins will execute the Maven goals (clean test) and run your tests.
 Optional: Configure Jenkins to use a specific version of Maven if required by installing Maven via Jenkins and configuring the Maven installation in the system settings.
 This should execute your Selenium test and any other Maven-based tests.
+
+
+
+meko testclass sab chal gaya lekin usse lu ke pure project ko 
+aur question1 ke ss hoge to bhejo
