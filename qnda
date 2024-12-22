@@ -107,6 +107,7 @@ Q4 karo
 testclass.java  file ka code bhejo
 ha krra zip bhej ra puri
 --------------------
+========Updated code========================================================================================================
 package com.cdac.acts;
 
 import org.openqa.selenium.By;
@@ -132,19 +133,30 @@ public class TestClass {
     {
 		driver.get("https://testpages.eviltester.com/styled/search");
 		 driver.findElement(By.xpath("//input[@name='q']")).clear();
-		 driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Selenium");
+		 driver.findElement(By.xpath("//input[@name='q']")).sendKeys("Selenium-RC");
 		
 	     driver.findElement(By.xpath("//input[@name='q']")).submit();
+	     String firstResultText = driver.findElement(By.cssSelector("#resultList li.resultlistitem a")).getText();
+	        System.out.println("First result: " + firstResultText);  
+
+	        
+	        if (firstResultText.contains("seleniumhq.org")) {
+	            System.out.println("Test Passed: First result matches 'seleniumhq.org'");
+	        } else {
+	            System.out.println("Test Failed: First result does not match 'seleniumhq.org'");
+	        }
+
+	        assert firstResultText.contains("seleniumhq.org") : "First result is incorrect!";
+	        
 	   
 
     }
 	 @AfterTest
 	    public void tearDown() {
-	        // Close the browser after the test
+	       
 	        if (driver != null) {
 	            driver.quit();
 	        }
 	    }
 }
-
-
+===============================================================================================================
