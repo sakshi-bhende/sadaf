@@ -37,6 +37,20 @@ bash
 Copy code
 sudo chgrp dac2 files.txt
 2.write a bsh script to find given directory exitsts or not ar any path .if not exits create it.take directory from user
+#!/bin/bash
+
+# Prompt the user to enter a directory path
+read -p "Enter the directory path: " dir_path
+
+# Check if the directory exists
+if [ -d "$dir_path" ]; then
+    echo "The directory '$dir_path' already exists."
+else
+    # Create the directory
+    mkdir -p "$dir_path"
+    echo "The directory '$dir_path' has been created."
+fi
+
 
 3write a program  to find the largest 4 digit number divisible by 10 and 13
 create git project 
