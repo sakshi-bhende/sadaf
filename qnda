@@ -53,9 +53,46 @@ fi
 
 
 3write a program  to find the largest 4 digit number divisible by 10 and 13
+public class LargestNumberDivisibleBy10And13 {
+    public static void main(String[] args) {
+        int largestFourDigitNumber = 9999;
+
+        // Loop to find the largest 4-digit number divisible by 10 and 13
+        while (largestFourDigitNumber % 10 != 0 || largestFourDigitNumber % 13 != 0) {
+            largestFourDigitNumber--;
+        }
+
+        System.out.println("The largest 4-digit number divisible by both 10 and 13 is: " + largestFourDigitNumber);
+    }
+}
+
 create git project 
+--------------------------------
+Steps to create a git project 
+git init
+git remote add origin url
+git add . 
+git commit -m"first commit"
+git push -u origin master
+-------------------------------------------
 
 write a dockerfile to execute ] PROGRA IN CONATINER
+----------------------------------------------------------
+# Use a base image with OpenJDK
+FROM openjdk:17-jdk-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the Java program to the working directory
+COPY LargestNumberDivisibleBy10And13.java .
+
+# Compile the Java program
+RUN javac LargestNumberDivisibleBy10And13.java
+
+# Specify the command to run the compiled Java program
+CMD ["java", "LargestNumberDivisibleBy10And13"]
+----------------------------------------------------------
 
 4 ] write selenium script to automate "the selenium simplified search engine"
 1]open https://testpages.eviltester.com/styled/search
