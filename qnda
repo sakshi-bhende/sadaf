@@ -6,7 +6,36 @@ writye the output of ls command to files.txt
 change the permission of files.txt to allow inly user to read and write nut group can read ,write and execute  also .
 create a new user "dac2"\
 change the group of file "file.txt" to dac2
+Print lines from /etc/passwd file:
 
+bash
+Copy code
+cat /etc/passwd
+Write the output of ls command to files.txt:
+
+bash
+Copy code
+ls > files.txt
+Change the permission of files.txt to allow only user to read/write but group can read, write, and execute:
+
+bash
+Copy code
+chmod 760 files.txt
+Explanation:
+
+7 = User can read (4), write (2), and execute (1).
+6 = Group can read (4) and write (2).
+0 = Others have no permissions.
+Create a new user dac2:
+
+bash
+Copy code
+sudo useradd dac2
+Change the group of the file files.txt to dac2:
+
+bash
+Copy code
+sudo chgrp dac2 files.txt
 2.write a bsh script to find given directory exitsts or not ar any path .if not exits create it.take directory from user
 
 3write a program  to find the largest 4 digit number divisible by 10 and 13
